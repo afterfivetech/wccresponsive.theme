@@ -13849,6 +13849,20 @@ table tr th {
   float: right;
   margin: 0 1em 0.5em 1em; }
 
+#content div.newsImageContainer a {
+  border-bottom: none; }
+
+#content div.newsImageContainer p.discreet {
+  margin: 0;
+  padding: 0.5em;
+  background-color: #666666;
+  background-color: rgba(40, 40, 40, 0.7);
+  color: White;
+  font-weight: bold;
+  position: relative;
+  width: 190px;
+  top: -3em; }
+
 .eventDetails {
   float: right;
   clear: right;
