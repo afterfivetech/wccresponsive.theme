@@ -13805,6 +13805,21 @@ div.event-listing-wrapper {
 #content .documentDescription {
   display: none !important; }
 
+#content pre {
+  background-color: #222222;
+  color: White;
+  font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace;
+  padding: 1em;
+  overflow-x: auto;
+  margin-bottom: 1em;
+  line-height: 1.25em; }
+
+#content pre.python {
+  background-color: White; }
+
+#content code {
+  font-family: Consolas, Inconsolata, Menlo, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace; }
+
 /*breadcrumbs*/
 #portal-breadcrumbs {
   margin: 10px 0;
