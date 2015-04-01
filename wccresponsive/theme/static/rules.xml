@@ -191,6 +191,12 @@
                 </div>
             </xsl:for-each>
         </replace>
+        <!--mobile widget-->
+        <replace css:theme-children="#mobile-widget" css:if-content-children=".template-view">
+            <xsl:for-each css:select="#portal-column-one .portletWrapper">
+                <xi:include href="portlet-rules.xml"/>
+            </xsl:for-each>
+        </replace>
     </rules>
     
     

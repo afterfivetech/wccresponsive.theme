@@ -13602,7 +13602,8 @@ nav {
         font-family: Frutiger, Candara, Arial, Helvetica, sans-serif;
         font-size: 20px; }
         .main aside .portlet-wrapper .social-portlet .social-icon {
-          /*social hover*/ }
+          /*social hover*/
+          /*donate*/ }
           .main aside .portlet-wrapper .social-portlet .social-icon span {
             float: left;
             margin-top: 5px; }
@@ -13641,6 +13642,15 @@ nav {
             background: transparent url(../images/social-sprite.png) -85px -37px no-repeat; }
           .main aside .portlet-wrapper .social-portlet .social-icon a.rss:hover {
             background: transparent url(../images/social-sprite.png) -128px -37px no-repeat; }
+          .main aside .portlet-wrapper .social-portlet .social-icon .donation-portlet a {
+            background: #205c90 none;
+            width: 100%;
+            display: block;
+            color: white;
+            padding: 15px;
+            font-size: 25px;
+            text-align: center;
+            margin-bottom: 20px; }
           .main aside .portlet-wrapper .social-portlet .social-icon a.news-letter:hover {
             background: transparent url(../images/social-sprite.png) -168px -37px no-repeat; }
     .main aside .donation-portlet a {
@@ -13827,6 +13837,11 @@ div.event-listing-wrapper {
 
 table tr th {
   color: white !important; }
+
+/*mobile widget*/
+#mobile-widget-container {
+  margin-top: 20px;
+  margin-bottom: 20px; }
 
 /* @group Content Area */
 /* Editor styles */
