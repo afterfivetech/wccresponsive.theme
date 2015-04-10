@@ -214,6 +214,11 @@
         <div style="margin-top:20px">
             <xsl:copy-of css:select="#edit-bar"/>
         </div>
+        <div id="mobile-prayerCycle" class="hide-for-large-up">
+            <h2 class="portlet-header"><xsl:copy-of css:select=".portlet.portletCurrentPrayerCycle dt"/></h2>
+            <xsl:copy-of css:select=".portlet.portletCurrentPrayerCycle .portletItem"/>
+            <xsl:copy-of css:select=".portlet.portletCurrentPrayerCycle .portletFooter"/>
+        </div>
     </after>
     <!--slider-->
     <replace css:theme-children=".focus-container" css:if-content=".template-view.portaltype-wcc-homepage-homepage">
