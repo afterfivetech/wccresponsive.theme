@@ -13890,13 +13890,13 @@ table tr th {
 #content div.newsImageContainer p.discreet {
   margin: 0;
   padding: 0.5em;
-  /*background-color: #666;*/
+  background-color: #666666;
   background-color: rgba(40, 40, 40, 0.7);
   color: White;
   font-weight: normal;
   font-size: 12px;
   position: relative;
-  /*width: 190px;*/
+  width: 200px;
   top: -3em; }
 
 .eventDetails {
