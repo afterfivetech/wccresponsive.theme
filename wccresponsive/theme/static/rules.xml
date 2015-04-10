@@ -159,12 +159,12 @@
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
                 <div class="clearfix news-list-item">
                     <xsl:if test="div/div/img">
+                        <h3><xsl:copy-of select="div/div/h3/a"/></h3>
                         <div class="row">
                             <div class="large-6 columns news-img">
                                 <xsl:copy-of select="div/div/img"/>
                             </div>
                             <div class="large-6 columns news-content">
-                                <h3><xsl:copy-of select="div/div/h3/a"/></h3>
                                 <p><xsl:value-of select="div/div/p/text()"/></p>
                             </div>
                         </div>
