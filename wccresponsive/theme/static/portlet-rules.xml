@@ -9,7 +9,8 @@
     <xsl:if 
         test="dl[contains(@class,'portlet')] and 
               not(dl[contains(@class,'portletSearch')]) and 
-              not(dl[contains(@class,'portletWCCSocialConnectPortlet')]) and 
+              not(dl[contains(@class,'portletWCCSocialConnectPortlet')]) and
+              not(dl[contains(@class,'portletCurrentPrayerCycle')]) and
               not(dl[contains(@class,'portletWCCDonationLinkPortlet')])">
         <div class="portlet-wrapper">
             <h2 class="portlet-header">
@@ -50,6 +51,21 @@
             <xsl:copy-of select="dl/dd/*"/>
         </div>
     </xsl:if>
+    <xsl:if test="dl[contains(@class,'portletCurrentPrayerCycle')]">
+        <div class="portlet-wrapper show-for-large-up">
+            <h2 class="portlet-header">
+                <xsl:copy-of select="dl/dt[@class='portletHeader']/node()"/>
+            </h2>
+            <div class="portlet-content">
+                <xsl:for-each select="dl/dd">
+                    <div>
+                        <xsl:copy-of select="*"/>
+                    </div>
+                </xsl:for-each>
+            </div>
+        </div>
+    </xsl:if>
+    
     <xsl:if test="not(dl[contains(@class,'portlet')])">
         <div class="portlet-wrapper">
             <xsl:copy-of select="node()"/>
