@@ -41,9 +41,7 @@
     <!--portal-siteactions-->
     <replace css:theme-children=".footer-link">
         <xsl:copy-of css:select="#siteaction-sitemap"/>
-        <li>
-            <a href="conditions-for-use" title="Conditions for Use and Privacy Policy">Conditions for Use and Privacy Policy</a>
-        </li>
+        <xsl:copy-of css:select="#condition-for-use"/>
         <xsl:copy-of css:select="#siteaction-accessibility"/>
         <xsl:copy-of css:select="#siteaction-contact"/>
     </replace>
