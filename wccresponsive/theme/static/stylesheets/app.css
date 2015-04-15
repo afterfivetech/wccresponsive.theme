@@ -13899,6 +13899,12 @@ table tr th {
   width: 200px;
   top: -3em; }
 
+#parent-fieldname-leadImage + p.discreet {
+  width: 200px !important; }
+
+#parent-fieldname-image + p.discreet {
+  width: 400px !important; }
+
 .eventDetails {
   float: right;
   clear: right;
