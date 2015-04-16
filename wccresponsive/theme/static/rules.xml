@@ -167,10 +167,8 @@
                     <xsl:if test="div/div/img">
                         <h3><xsl:copy-of select="div/div/h3/a"/></h3>
                         <div class="row">
-                            <div class="large-6 columns news-img">
+                            <div class="large-12 column news-content">
                                 <xsl:copy-of select="div/div/img"/>
-                            </div>
-                            <div class="large-6 columns news-content">
                                 <p><xsl:value-of select="div/div/p/text()"/></p>
                             </div>
                         </div>
