@@ -13674,6 +13674,9 @@ nav {
         border-right: 1px solid #cccccc; }
         .main section.main-page .main-page-content-container .news-list-container .news-list-item {
           margin: 10px; }
+          .main section.main-page .main-page-content-container .news-list-container .news-list-item .news-content > img {
+            float: left;
+            margin: 0 20px 10px 0; }
       .main section.main-page .main-page-content-container .events-list-container h2 {
         margin: 10px; }
       .main section.main-page .main-page-content-container .events-list-container .events-list-item {
