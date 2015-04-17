@@ -251,10 +251,13 @@
             <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 545px; height: 340px;overflow: hidden;">           
                 <xsl:for-each css:select="ul.navigator-wrap-inner li">
                     <div class="wrapInner">
-                        <xsl:element name="img">
-                            <xsl:attribute name="u">image</xsl:attribute>
-                            <xsl:attribute name="class">nav-slider-img</xsl:attribute>
-                            <xsl:attribute name="src"></xsl:attribute>
+                        <xsl:element name="a">
+                            <xsl:attribute name="href"><xsl:value-of select="div/a/@href"/></xsl:attribute>
+                            <xsl:element name="img">
+                                <xsl:attribute name="u">image</xsl:attribute>
+                                <xsl:attribute name="class">nav-slider-img</xsl:attribute>
+                                <xsl:attribute name="src"></xsl:attribute>
+                            </xsl:element>
                         </xsl:element>
                         <div u="thumb">
                             <h4><xsl:value-of select="div/a/h2"/></h4>
