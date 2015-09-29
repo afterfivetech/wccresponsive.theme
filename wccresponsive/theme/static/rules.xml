@@ -161,7 +161,7 @@
     
     <!--bss slider/mobile slider-->
     <before css:theme=".focus-container">
-        <div class="hide-for-large bss-slides num1" tabindex="1" autofocus="autofocus">
+        <div class="hide-for-large bss-slides num2" tabindex="1" autofocus="autofocus">
             <figure>
                 <a href="">
                   <img src="http://dummyimage.com/600x400/f1f1f1/ccc.jpg" width="100%" />
@@ -224,25 +224,15 @@
         <script src="++theme++wccresponsive.theme/js/tinynav.min.js"></script>
         
         <xsl:if css:test=".template-view.portaltype-wcc-homepage-homepage">
-            <script src="++theme++wccresponsive.theme/stylesheets/bss-slider.css"></script>
+            <link rel="stylesheet" src="++theme++wccresponsive.theme/stylesheets/bss-slider.css" />
             <script src="++theme++wccresponsive.theme/js/better-simple-slideshow.min.js"></script>            
             <script>
                 var opts = {
-                    auto : {
-                        speed : 3500, 
-                        pauseOnHover : true
-                    },
-                    fullScreen : false, 
-                    swipe : true
-                };
-                makeBSS('.num1', opts);
-                
-                var opts2 = {
                     auto : false,
                     fullScreen : true,
-                    swipe : true
+                    swipe : false
                 };
-                makeBSS('.num1', opts2);
+                makeBSS('.num2', opts);
             </script>
             
         </xsl:if>
