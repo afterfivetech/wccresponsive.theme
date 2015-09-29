@@ -80,8 +80,9 @@
         <xsl:copy-of css:select="#portal-column-two .managePortletsLink"/>
     </replace>
 
-    <!--subsite homepage-->
-    <rules css:if-content="#homepage-view.homepage-full-width">
+    <!--homepage full width slider-->
+    <rules css:if-content=".homepage-full-width.homepage-view">
+        <drop content="/html/head/script[contains(@src, 'homepage.js')]" />
         <theme href="index-subsite.html"/>
         <replace css:theme-children=".subsite-news-container">
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
@@ -102,63 +103,8 @@
         </replace>
     </rules>
     
-    <rules css:if-content="#homepage2-view.homepage-view">
-        <theme href="index-subsite.html"/>
-        <replace css:theme-children=".subsite-news-container">
-            <div class="large-12 column">
-                <div class="news-item">
-                    <xsl:copy-of css:select="#homepage2-bodytext > div"/>
-                </div>
-            </div>
-        </replace>
-    </rules>
-    
-    <rules css:if-content="#homepage3-view.homepage-view">
-        <theme href="index-subsite.html"/>
-        <replace css:theme-children=".subsite-news-container">
-            <xsl:for-each css:select="#homepage3-newsblock > div.news-cell.cell > div:nth-child(1) > div.cell">
-                <div class="large-4 columns">
-                    <div class="news-item">
-                        <xsl:if test="div[1]/img">
-                            <h2><xsl:copy-of select="div[2]/h3/a"/></h2>
-                            <xsl:copy-of select="div[1]/img"/>
-                            <p><xsl:value-of select="div[2]/p/text()"/></p>
-                        </xsl:if>
-                        <xsl:if test="not(div[1]/img)">
-                            <h2><xsl:copy-of select="div[2]/h3/a"/></h2>
-                            <p><xsl:value-of select="div[2]/p/text()"/></p>
-                        </xsl:if>
-                    </div>
-                </div>
-            </xsl:for-each>
-        </replace>
-        <replace css:theme-children=".sidebar-right" css:content=".homepage3-text" />
-    </rules>
-    
-    <rules css:if-content="#homepage4-view.homepage-view">
-        <theme href="index-subsite.html"/>
-        <replace css:theme-children=".subsite-news-container">
-            <xsl:for-each css:select="#homepage-news .homepage-newsitem">
-                <div class="large-4 columns">
-                    <div class="news-item">
-                        <xsl:if test="div/div/img">
-                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
-                            <xsl:copy-of select="div/div/img"/>
-                            <p><xsl:value-of select="div/div/p/text()"/></p>
-                        </xsl:if>
-                        <xsl:if test="not(div/div/img)">
-                            <h2><xsl:copy-of select="div/div/h3/a"/></h2>
-                            <p><xsl:value-of select="div/div/p/text()"/></p>
-                        </xsl:if>
-                    </div>
-                </div>
-            </xsl:for-each>
-        </replace>
-    </rules>
-    
-    <!--main homepage-->
-    <!--<rules css:if-content="#homepage5-view.homepage-normal-width">-->
-    <rules css:if-content=".template-view.portaltype-wcc-homepage-homepage">
+    <!--homepage normal slider width-->
+    <rules css:if-content=".homepage-normal-width.homepage-view">
         <drop content="/html/head/script[contains(@src, 'homepage.js')]" />
         <theme href="index.html" />
         <replace css:theme-children=".news-list-container">
@@ -203,8 +149,6 @@
         </replace>
     </rules>
     
-    
-    
     <!--for all homepage-->
     <after css:theme=".subsite-news-container">
         <div class="clearfix news-list-morelink" style="text-align:right;margin-bottom:15px">
@@ -214,36 +158,37 @@
             </div>
         </div>
     </after>
-    <!--bss slider-->
+    
+    <!--bss slider/mobile slider-->
     <before css:theme=".focus-container">
         <div class="hide-for-large bss-slides num1" tabindex="1" autofocus="autofocus">
             <figure>
                 <a href="">
-                  <img src="../img/photography/001.jpg" width="100%" />
+                  <img src="++theme++wccresponsive.theme/images/001.jpg" width="100%" />
                 </a>
                 <figcaption>Caption for first slide</figcaption>
             </figure>
             <figure>
                 <a href="">
-                  <img src="../img/photography/002.jpg" width="100%" />
+                  <img src="++theme++wccresponsive.theme/images/002.jpg" width="100%" />
                 </a>
                 <figcaption>Caption for second slide</figcaption>
             </figure>
             <figure>
                 <a href="">
-                  <img src="../img/photography/003.jpg" width="100%" />
+                  <img src="++theme++wccresponsive.theme/images/003.jpg" width="100%" />
                 </a>
                 <figcaption>Caption for third slide</figcaption>
             </figure>
             <figure>
                 <a href="">
-                  <img src="../img/photography/004.jpg" width="100%" />
+                  <img src="++theme++wccresponsive.theme/images/004.jpg" width="100%" />
                 </a>
                 <figcaption>Caption for fourth slide</figcaption>
             </figure>
             <figure>
                 <a href="">
-                  <img src="../img/photography/005.jpg" width="100%" />
+                  <img src="++theme++wccresponsive.theme/images/005.jpg" width="100%" />
                 </a>
                 <figcaption>Caption for fifth slide</figcaption>
             </figure>
@@ -260,162 +205,9 @@
             <xsl:copy-of css:select=".portlet.portletCurrentPrayerCycle .portletFooter"/>
         </div>
     </after>
-    <!--slider-->
-    <replace css:theme-children=".focus-container" css:if-content=".template-view.portaltype-wcc-homepage-homepage">
-        
-        <ul class="sliders-wrap-inner2" style="display:none">
-            <xsl:for-each css:select="ul.sliders-wrap-inner li">
-                <li>
-                    <xsl:copy-of select="a"/>
-                </li>
-            </xsl:for-each>
-        </ul>
-        
-        <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 810px; height: 340px; background: #E3E2DB; overflow: hidden; ">
-
-            <!-- Loading Screen -->
-            <div u="loading" style="position: absolute; top: 0px; left: 0px;">
-                <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
-                    background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
-                </div>
-                <div style="position: absolute; display: block; background: url(++theme++wccresponsive.theme/images/loading.gif) no-repeat center center;
-                    top: 0px; left: 0px;width: 100%;height:100%;">
-                </div>
-            </div>
     
-            <!-- Slides Container -->
-            <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 545px; height: 340px;overflow: hidden;">           
-                <xsl:for-each css:select="ul.navigator-wrap-inner li">
-                    <div class="wrapInner">
-                        <xsl:element name="a">
-                            <xsl:attribute name="href"><xsl:value-of select="div/a/@href"/></xsl:attribute>
-                            <xsl:element name="img">
-                                <xsl:attribute name="u">image</xsl:attribute>
-                                <xsl:attribute name="class">nav-slider-img</xsl:attribute>
-                                <xsl:attribute name="src"></xsl:attribute>
-                            </xsl:element>
-                        </xsl:element>
-                        <div u="thumb">
-                            <h4><xsl:value-of select="div/a/h2"/></h4>
-                            <p><xsl:value-of select="div/a/span"/></p>
-                        </div>
-                    </div>
-                </xsl:for-each>
-            </div>
-            <!-- ThumbnailNavigator Skin Begin -->
-            <div u="thumbnavigator" class="jssort11" style="position: absolute; width: 350px; height: 340px; left:465px; top:0px;">
-                <!-- Thumbnail Item Skin Begin -->
-                <style>
-                    /* jssor slider thumbnail navigator skin 11 css */
-                    /*
-                    .jssort11 .p            (normal)
-                    .jssort11 .p:hover      (normal mouseover)
-                    .jssort11 .pav          (active)
-                    .jssort11 .pav:hover    (active mouseover)
-                    .jssort11 .pdn          (mousedown)
-                    */
-                    .jssort11{font-family: Arial, Helvetica, sans-serif;}
-                    .jssort11 .i, .jssort11 .pav:hover .i{
-                      position: absolute;
-                      top:3px;
-                      left:3px;
-                      WIDTH: 60px;
-                      HEIGHT: 30px;
-                      border: white 1px dashed;
-                    }
-                    * html .jssort11 .i{
-                      WIDTH /**/: 62px;
-                      HEIGHT /**/: 32px;
-                    }
-                    .jssort11 .pav .i{
-                      border: white 1px solid;
-                    }
-                    .jssort11 .t, .jssort11 .pav:hover .t{
-                      position: absolute;
-                      top: 3px;
-                      left: 68px;
-                      width:129px;
-                      height: 32px;
-                      line-height:32px;
-                      text-align: center;
-                      color:#fc9835;
-                      font-size:13px;
-                      font-weight:700;
-                    }
-                    .jssort11 .pav .t, .jssort11 .phv .t, .jssort11 .p:hover .t{
-                      color:#fff;
-                    }
-                    .jssort11 .c, .jssort11 .pav:hover .c{
-                      position: absolute;
-                      top: 38px;
-                      left: 3px;
-                      width:197px;
-                      height: 31px;
-                      line-height:31px;
-                      color:#fff;
-                      font-size:11px;
-                      font-weight:400;
-                      overflow: hidden;
-                    }
-                    .jssort11 .pav .c, .jssort11 .phv .c, .jssort11 .p:hover .c{
-                      color:#fc9835;
-                    }
-                    .jssort11 .t, .jssort11 .c{
-                      transition: color 2s;
-                      -moz-transition: color 2s;
-                      -webkit-transition: color 2s;
-                      -o-transition: color 2s;
-                    }
-                    .jssort11 .p:hover .t, .jssort11 .phv .t, .jssort11 .pav:hover .t, .jssort11 .p:hover .c, .jssort11 .phv .c, .jssort11 .pav:hover .c{
-                      transition: none;
-                      -moz-transition: none;
-                      -webkit-transition: none;
-                      -o-transition: none;
-                    }
-                    .jssort11 .p{
-                          /*background:#181818;*/
-                          color: #800000;
-                    }
-                    .jssort11 .pav, .jssort11 .pdn{
-                      background: url(++theme++wccresponsive.theme/images/arrow.png) 31px 0 no-repeat transparent;
-                      color: #fff !important;
-                    }
-                    .jssort11 .p:hover, .jssort11 .phv, .jssort11 .pav:hover{
-                      /*background:#333;*/
-                      }
-                    .jssort11 .pav h4, .jssort11 .pav span, .pdn h4, .jssort11 .pdn span{color: #fff}
-                    .jssort11 .pav h4,
-                    .jssort11 .pdn h4,
-                    .jssort11 .p h4{
-                      margin: 10px 10px 0 60px;
-                      text-align: right;
-                      padding-left: 40px;
-                      line-height: 20px;
-                    }
-                    .jssort11 .pav p,
-                    .jssort11 .pdn p,
-                    .jssort11 .p p{
-                      margin: 0 10px 0 60px;
-                      text-align: right;
-                      padding-left: 40px;
-                    }
-                    .nav-slider-img{border: 10px solid #fff}
-                </style>
-                <div u="slides" style="cursor: move;">
-                    <div u="prototype" class="p" style="position: absolute; width: 340px; height: 80px; top: 0; left: 0;">
-                        <div u="thumbnailtemplate" style=" width: 100%; height: 100%; border: none;position:absolute; top: 0; left: 0;"></div>
-                    </div>
-                </div>
-                <!-- Thumbnail Item Skin End -->
-            </div>
-            <!-- ThumbnailNavigator Skin End -->
-    
-        </div>
-    </replace>
-
-    <!--<rules if-content="//body[contains(@class,'template-edit')] or //body[contains(@class,'template-atct_edit')]">-->
-    <!--    <theme href="content.html" />-->
-    <!--</rules>-->
+    <!--default slider-->
+    <replace css:theme-children=".focus-container" css:content="#homepage-slider"/>
     
     <!--content-->
     <theme href="content-center.html" if-content="//div[@id='portal-column-one'] and //div[@id='portal-column-two']"/>
