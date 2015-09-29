@@ -214,6 +214,42 @@
             </div>
         </div>
     </after>
+    <!--bss slider-->
+    <before css:theme=".focus-container">
+        <div class="hide-for-large bss-slides num1" tabindex="1" autofocus="autofocus">
+            <figure>
+                <a href="">
+                  <img src="../img/photography/001.jpg" width="100%" />
+                </a>
+                <figcaption>Caption for first slide</figcaption>
+            </figure>
+            <figure>
+                <a href="">
+                  <img src="../img/photography/002.jpg" width="100%" />
+                </a>
+                <figcaption>Caption for second slide</figcaption>
+            </figure>
+            <figure>
+                <a href="">
+                  <img src="../img/photography/003.jpg" width="100%" />
+                </a>
+                <figcaption>Caption for third slide</figcaption>
+            </figure>
+            <figure>
+                <a href="">
+                  <img src="../img/photography/004.jpg" width="100%" />
+                </a>
+                <figcaption>Caption for fourth slide</figcaption>
+            </figure>
+            <figure>
+                <a href="">
+                  <img src="../img/photography/005.jpg" width="100%" />
+                </a>
+                <figcaption>Caption for fifth slide</figcaption>
+            </figure>
+        </div>
+    </before><!--bss slider end-->
+    
     <after css:theme=".focus-container">
         <div style="margin-top:20px">
             <xsl:copy-of css:select="#edit-bar"/>
@@ -396,6 +432,8 @@
         <script src="++theme++wccresponsive.theme/js/tinynav.min.js"></script>
         
         <xsl:if css:test=".template-view.portaltype-wcc-homepage-homepage">
+            <script src="++theme++wccresponsive.theme/stylesheets/bss-slider.css"></script>
+            <script src="++theme++wccresponsive.theme/js/better-simple-slideshow.min.js"></script>
             <script src="++theme++wccresponsive.theme/js/jssor.js"></script>
             <script src="++theme++wccresponsive.theme/js/jssor.slider.js"></script>
             <script>
@@ -478,6 +516,26 @@
                     //}
                 });
             </script>
+            
+            <script>
+                var opts = {
+                    auto : {
+                        speed : 3500, 
+                        pauseOnHover : true
+                    },
+                    fullScreen : false, 
+                    swipe : true
+                };
+                makeBSS('.num1', opts);
+                
+                var opts2 = {
+                    auto : false,
+                    fullScreen : true,
+                    swipe : true
+                };
+                makeBSS('.num2', opts2);
+            </script>
+            
         </xsl:if>
         <script src="++theme++wccresponsive.theme/js/app.js"></script>
     </after>
