@@ -39,10 +39,10 @@
        cacheable="False" compression="safe" cookable="False"
        enabled="1" expression="python: request.HTTP_X_THEME_ENABLED and not '@@theming-controlpanel' in request.getURL()" applyPrefix="True" insert-before="reset"/>
     <stylesheet title="Color Scheme"
-        insert-after="++theme++wccresponsive.theme/stylesheets/app.css"
-       id="wcc-theme-scheme.css"
+       id="++theme++wccresponsive.theme/stylesheets/bss-slider.css"
        media="screen" rel="stylesheet" rendering="import"
        cacheable="False" compression="safe" cookable="False"
        enabled="1" expression="python: request.HTTP_X_THEME_ENABLED and not '@@theming-controlpanel' in request.getURL()" applyPrefix="True" insert-before="reset"/>
+    
 
 </object>
