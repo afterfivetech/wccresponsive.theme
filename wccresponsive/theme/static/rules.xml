@@ -223,8 +223,7 @@
         <script src="++theme++wccresponsive.theme/js/foundation.min.js"></script>
         <script src="++theme++wccresponsive.theme/js/tinynav.min.js"></script>
         
-        <xsl:if css:test=".template-view.portaltype-wcc-homepage-homepage">
-            <link rel="stylesheet" src="++theme++wccresponsive.theme/stylesheets/bss-slider.css" />
+        <xsl:if css:test=".homepage-normal-width.homepage-view">
             <script src="++theme++wccresponsive.theme/js/better-simple-slideshow.min.js"></script>            
             <script>
                 var opts = {
