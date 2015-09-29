@@ -82,7 +82,6 @@
 
     <!--homepage full width slider-->
     <rules css:if-content=".homepage-full-width.homepage-view">
-        <drop content="/html/head/script[contains(@src, 'homepage.js')]" />
         <theme href="index-subsite.html"/>
         <replace css:theme-children=".subsite-news-container">
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
@@ -105,7 +104,6 @@
     
     <!--homepage normal slider width-->
     <rules css:if-content=".homepage-normal-width.homepage-view">
-        <drop content="/html/head/script[contains(@src, 'homepage.js')]" />
         <theme href="index.html" />
         <replace css:theme-children=".news-list-container">
             <xsl:for-each css:select="#homepage-news .homepage-newsitem">
@@ -162,36 +160,28 @@
     <!--bss slider/mobile slider-->
     <before css:theme=".focus-container">
         <div class="hide-for-large bss-slides num2" tabindex="1" autofocus="autofocus">
-            <figure>
-                <a href="">
-                  <img src="http://dummyimage.com/600x400/f1f1f1/ccc.jpg" width="100%" />
-                </a>
-                <figcaption>Caption for first slide</figcaption>
-            </figure>
-            <figure>
-                <a href="">
-                  <img src="http://dummyimage.com/600x400/f1f1f1/ccc.jpg" width="100%" />
-                </a>
-                <figcaption>Caption for second slide</figcaption>
-            </figure>
-            <figure>
-                <a href="">
-                  <img src="http://dummyimage.com/600x400/f1f1f1/ccc.jpg" width="100%" />
-                </a>
-                <figcaption>Caption for third slide</figcaption>
-            </figure>
-            <figure>
-                <a href="">
-                  <img src="http://dummyimage.com/600x400/f1f1f1/ccc.jpg" width="100%" />
-                </a>
-                <figcaption>Caption for fourth slide</figcaption>
-            </figure>
-            <figure>
+            
+            <xsl:for-each css:select="ul.navigator-wrap-inner li">
+                <figure>
+                    <xsl:element name="a">
+                        <xsl:attribute name="href"><xsl:value-of select="div/a/@href"/></xsl:attribute>
+                        <xsl:element name="img">
+                            <xsl:attribute name="class">nav-slider-img</xsl:attribute>
+                            <xsl:attribute name="src"></xsl:attribute>
+                        </xsl:element>
+                    </xsl:element>
+                    <figcaption>
+                        <xsl:value-of select="div/a/h2"/>
+                    </figcaption>
+                </figure>
+            </xsl:for-each>
+            
+            <!--<figure>
                 <a href="">
                   <img src="http://dummyimage.com/600x400/f1f1f1/ccc.jpg" width="100%" />
                 </a>
                 <figcaption>Caption for fifth slide</figcaption>
-            </figure>
+            </figure>-->
         </div>
     </before><!--bss slider end-->
     
@@ -232,6 +222,17 @@
                     swipe : false
                 };
                 makeBSS('.num2', opts);
+            </script>
+            <script>
+                $(function(){
+                        var picNum = $('ul.sliders-wrap-inner2 li').length;
+                        $('ul.sliders-wrap-inner2 li').each(function(key, value){
+                            imgSrc = $('> a > img', this).attr('src');
+                            $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);  
+                            $('img.nav-slider-img:eq('+(picNum+key)+')').attr('src', imgSrc);
+                        });
+                    //}
+                });
             </script>
             
         </xsl:if>
