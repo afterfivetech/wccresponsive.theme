@@ -20,5 +20,5 @@
                            title title;
                            accesskey accesskey;"
            >Site action</a></li>
-	<li id="condition-for-use"><a tal:attributes="href string:${portal_url}/${lang}/conditions-for-use" tal:content="python: lang_link[lang]"></a></li>
+	<li id="condition-for-use"><a tal:attributes="href string:http://www.oikoumene.org/${lang}/conditions-for-use" tal:content="python: lang_link[lang]"></a></li>
 </ul>
