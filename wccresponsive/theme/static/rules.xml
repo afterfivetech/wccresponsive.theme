@@ -175,7 +175,6 @@
                     </figcaption>
                 </figure>
             </xsl:for-each>
-            
             <!--<figure>
                 <a href="">
                   <img src="http://dummyimage.com/600x400/f1f1f1/ccc.jpg" width="100%" />
@@ -225,8 +224,8 @@
             </script>
             <script>
                 $(function(){
-                        var picNum = $('ul.sliders-wrap-inner2 li').length;
-                        $('ul.sliders-wrap-inner2 li').each(function(key, value){
+                        var picNum = $('ul.sliders-wrap-inner li').length;
+                        $('ul.sliders-wrap-inner li').each(function(key, value){
                             imgSrc = $('> a > img', this).attr('src');
                             $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);  
                             $('img.nav-slider-img:eq('+(picNum+key)+')').attr('src', imgSrc);
@@ -234,7 +233,6 @@
                     //}
                 });
             </script>
-            
         </xsl:if>
         <script src="++theme++wccresponsive.theme/js/app.js"></script>
     </after>
