@@ -224,13 +224,12 @@
             </script>
             <script>
                 $(function(){
-                        var picNum = $('ul.sliders-wrap-inner li').length;
-                        $('ul.sliders-wrap-inner li').each(function(key, value){
-                            imgSrc = $('> a > img', this).attr('src');
-                            $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);  
-                            $('img.nav-slider-img:eq('+(picNum+key)+')').attr('src', imgSrc);
-                        });
-                    //}
+                    var picNum = $('ul.sliders-wrap-inner li').length;
+                    $('ul.sliders-wrap-inner li').each(function(key, value){
+                        imgSrc = $('> a > img', this).attr('src');
+                        $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);  
+                        //$('img.nav-slider-img:eq('+(picNum+key)+')').attr('src', imgSrc);
+                    });
                 });
             </script>
         </xsl:if>
