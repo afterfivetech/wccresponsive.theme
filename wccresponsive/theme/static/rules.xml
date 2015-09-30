@@ -167,6 +167,7 @@
                         <xsl:attribute name="href"><xsl:value-of select="div/a/@href"/></xsl:attribute>
                         <xsl:element name="img">
                             <xsl:attribute name="class">nav-slider-img</xsl:attribute>
+                            <xsl:attribute name="width">100%</xsl:attribute>
                             <xsl:attribute name="src"></xsl:attribute>
                         </xsl:element>
                     </xsl:element>
@@ -212,7 +213,7 @@
         <script src="++theme++wccresponsive.theme/js/foundation.min.js"></script>
         <script src="++theme++wccresponsive.theme/js/tinynav.min.js"></script>
         
-        <xsl:if css:test=".homepage-normal-width.homepage-view">
+        <xsl:if css:test=".homepage-view">
             <script src="++theme++wccresponsive.theme/js/better-simple-slideshow.min.js"></script>            
             <script>
                 var opts = {
@@ -223,13 +224,11 @@
                 makeBSS('.num2', opts);
             </script>
             <script>
-                $(function(){
-                    var picNum = $('ul.sliders-wrap-inner li').length;
-                    $('ul.sliders-wrap-inner li').each(function(key, value){
-                        imgSrc = $('> a > img', this).attr('src');
-                        $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);  
-                        //$('img.nav-slider-img:eq('+(picNum+key)+')').attr('src', imgSrc);
-                    });
+                var picNum = $('ul.sliders-wrap-inner li').length;
+                $('ul.sliders-wrap-inner li').each(function(key, value){
+                    imgSrc = $('> a > img', this).attr('src');
+                    $('img.nav-slider-img:eq('+key+')').attr('src', imgSrc);  
+                    $('img.nav-slider-img:eq('+(picNum+key)+')').attr('src', imgSrc);
                 });
             </script>
         </xsl:if>
