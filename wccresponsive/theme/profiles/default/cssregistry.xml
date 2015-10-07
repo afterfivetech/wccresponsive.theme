@@ -43,6 +43,11 @@
        media="screen" rel="stylesheet" rendering="import"
        cacheable="False" compression="safe" cookable="False"
        enabled="1" expression="python: request.HTTP_X_THEME_ENABLED and not '@@theming-controlpanel' in request.getURL()" applyPrefix="True" insert-before="reset"/>
+    <stylesheet title="Color Scheme"
+       id="++theme++wccresponsive.theme/stylesheets/foundation-icons.css"
+       media="screen" rel="stylesheet" rendering="import"
+       cacheable="False" compression="safe" cookable="False"
+       enabled="1" expression="python: request.HTTP_X_THEME_ENABLED and not '@@theming-controlpanel' in request.getURL()" applyPrefix="True" insert-before="reset"/>
     
 
 </object>
