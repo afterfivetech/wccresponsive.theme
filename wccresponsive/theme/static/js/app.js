@@ -5,5 +5,12 @@ $("#portal-globalnav").tinyNav({
     indent: '- ', // String: Specify text for indenting sub-items
     label: '' // String: Sets the 
 });
-    
-//jssor_slider1_starter('slider1_container');
+
+    $( "#button-search" ).click(function() {
+      $( "#effect" ).removeClass( "show-for-large" );
+    });
+    function callback() {
+      setTimeout(function() {
+        $( "#effect" ).addClass( "newClass" );
+      }, 1500 );
+    }
