@@ -13,54 +13,78 @@
       <div class="row colorstrip-inner"></div>
     </div><!--.top red-->
     
-    <div class="row main-wrapper"><!--start main wrapper-->
-      
-      <!--main header-->
-      <header class="large-12 column main-header">
-        <div class="row">
-          <!--left header-->
-          <div class="large-8 columns logo-container">
-          <h1 class="title">
-            <a id="logo" href="#">World Council of Churches</a>
-          </h1>
-          <p class="tagline">
-            A worldwide fellowship of churches seeking unity, a common witness and Christian service
-          </p>
-        </div>
-        <!--right header-->
-        <div class="large-4 columns top-right-container">
-          <ul id="portal-languageselector" class="language clearfix">
-            <li class="selected"><a href="">English</a></li>
-            <li><a href="">Deutsch</a></li>
-            <li><a href="">Fran&ccedil;ais</a></li>
-            <li><a href="">Espa&ntilde;ol</a></li>
+    <div class="off-canvas-wrap" data-offcanvas>
+      <div class="inner-wrap">
+        
+        <nav class="tab-bar hide-for-large">
+          <section id="m-toggle-menu" class="left-small">
+            <a class="left-off-canvas-toggle menu-icon" href="#"><span></span></a>
+          </section>
+          <section id="m-btn-search" class="left-small">
+            <i id="button-search" class="fi-magnifying-glass size-24" style="display: block; text-align: center;cursor: pointer;padding: 12px 0"></i>
+          </section>
+          <section id="m-logo" class="middle tab-bar-section">
+            <img src="./images/m-logo.jpg" alt="world Council of Churches" />
+          </section>
+        </nav>
+    
+        <aside class="left-off-canvas-menu hide-for-large">
+          <ul class="off-canvas-list">
+            <li><label>WCC</label></li>
+            <li><a href="#">The Psychohistorians</a></li>
+            <li><a href="#">...</a></li>
           </ul>
+        </aside>
+    
+        <div class="row main-wrapper"><!--start main wrapper-->
           
-          <!--search-->
-          <div class="search-container">
-            <form class="search-portlet">
-              <input type="text" placeholder="Search" />
-              <input type="submit" value="Search" />
-            </form>
-          </div>
-        </div>
-        </div>
-      </header>
-      
-      <nav class="large-12 column">
-        <div class="row">
-          <ul id="portal-globalnav">
-            <li><a href="#">Home</a></li>
-            <li class="selected"><a href="#">About</a></li>
-            <li><a href="#">Member</a></li>
-            <li><a href="#">Churches</a></li>
-            <li><a href="#">What we do</a></li>
-            <li><a href="#">Get Involved</a></li>
-            <li><a href="#">Resources</a></li>
-            <li><a href="#">Press Center</a></li>
-          </ul>
-        </div>
-      </nav>
+          <!--main header-->
+          <header class="large-12 column main-header">
+            <div class="row">
+              <!--left header-->
+              <div class="large-8 columns logo-container show-for-large">
+              <h1 class="title">
+                <a id="logo" href="#">World Council of Churches</a>
+              </h1>
+              <p class="tagline">
+                A worldwide fellowship of churches seeking unity, a common witness and Christian service
+              </p>
+            </div>
+            <!--right header-->
+            <div class="large-4 columns top-right-container">
+              <ul id="portal-languageselector" class="language clearfix show-for-large">
+                <li class="selected"><a href="">English</a></li>
+                <li><a href="">Deutsch</a></li>
+                <li><a href="">Fran&ccedil;ais</a></li>
+                <li><a href="">Espa&ntilde;ol</a></li>
+              </ul>
+              
+              <div class="clearfix hide-for-large"><br /></div>
+              <!--search-->
+              <div id="effect" class="search-container show-for-large">
+                <form class="search-portlet">
+                  <input type="text" placeholder="Search" />
+                  <input type="submit" value="Search" />
+                </form>
+              </div>
+            </div>
+            </div>
+          </header>
+          
+          <nav class="large-12 column show-for-large">
+            <div class="row">
+              <ul id="portal-globalnav">
+                <li><a href="#">Home</a></li>
+                <li class="selected"><a href="#">About</a></li>
+                <li><a href="#">Member</a></li>
+                <li><a href="#">Churches</a></li>
+                <li><a href="#">What we do</a></li>
+                <li><a href="#">Get Involved</a></li>
+                <li><a href="#">Resources</a></li>
+                <li><a href="#">Press Center</a></li>
+              </ul>
+            </div>
+          </nav>
       
       <section id="main" class="main large-12 column">
         
@@ -165,6 +189,10 @@
           </ul>
       </div>
     </footer>
+    
+    <!--close tags for off canvas-->
+      </div>
+     </div>
 
     
 
