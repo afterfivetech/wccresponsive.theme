@@ -61,3 +61,11 @@ button:hover, .button:hover, input[type="button"]:hover, input[type="reset"]:hov
 .tinynav, .tinynav:focus,.tinynav:hover{
     background-color:#739600;
 }
+
+.bss-slides figcaption,
+#m-toggle-menu{
+    background: none #739600;
+}
+.bss-next, .bss-prev{
+    color: #739600;
+}
