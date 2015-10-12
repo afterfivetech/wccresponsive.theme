@@ -160,29 +160,24 @@
     
     <!--bss slider/mobile slider-->
     <before css:theme=".focus-container">
-        <div class="hide-for-large bss-slides num2" tabindex="1" autofocus="autofocus">
-            
-            <xsl:for-each css:select="ul.navigator-wrap-inner li">
-                <figure>
-                    <xsl:element name="a">
-                        <xsl:attribute name="href"><xsl:value-of select="div/a/@href"/></xsl:attribute>
-                        <xsl:element name="img">
-                            <xsl:attribute name="class">nav-slider-img</xsl:attribute>
-                            <xsl:attribute name="width">100%</xsl:attribute>
-                            <xsl:attribute name="src"></xsl:attribute>
+        <div class="row">
+            <div class="hide-for-large bss-slides num2" tabindex="1" autofocus="autofocus">
+                <xsl:for-each css:select="ul.navigator-wrap-inner li">
+                    <figure>
+                        <xsl:element name="a">
+                            <xsl:attribute name="href"><xsl:value-of select="div/a/@href"/></xsl:attribute>
+                            <xsl:element name="img">
+                                <xsl:attribute name="class">nav-slider-img</xsl:attribute>
+                                <xsl:attribute name="width">100%</xsl:attribute>
+                                <xsl:attribute name="src"></xsl:attribute>
+                            </xsl:element>
                         </xsl:element>
-                    </xsl:element>
-                    <figcaption>
-                        <xsl:value-of select="div/a/h2"/>
-                    </figcaption>
-                </figure>
-            </xsl:for-each>
-            <!--<figure>
-                <a href="">
-                  <img src="http://dummyimage.com/600x400/f1f1f1/ccc.jpg" width="100%" />
-                </a>
-                <figcaption>Caption for fifth slide</figcaption>
-            </figure>-->
+                        <figcaption>
+                            <xsl:value-of select="div/a/h2"/>
+                        </figcaption>
+                    </figure>
+                </xsl:for-each>
+            </div>
         </div>
     </before><!--bss slider end-->
     
