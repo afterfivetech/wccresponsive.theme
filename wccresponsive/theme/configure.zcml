@@ -19,9 +19,9 @@
 
     <!--<genericsetup:registerProfile
         name="default"
-        title="WCC Responsive Theme"
+        title="WCCRESPONSIVE Theme"
         directory="profiles/default"
-        description='Extension profile for the "WCC" Plone theme.'
+        description='Extension profile for the "WCCRESPONSIVE" Plone theme.'
         provides="Products.GenericSetup.interfaces.EXTENSION"
         />-->
 
