@@ -1,0 +1,71 @@
+.top-colorstrip{
+    background: none #0534B6;
+}
+
+nav {
+    background: none #0534B6;
+}
+
+.footer-link li a:hover {
+    color: #0534B6;
+}
+
+a{
+    color: #0534B6;
+}
+a:focus{
+    color: #0534B6;
+}
+a:hover{
+    color: #000;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: #0534B6;
+}
+
+h2.portlet-header{
+    border-bottom: 1px solid #0534B6;
+}
+
+.lof-slidecontent ul.navigator-wrap-inner li.active {
+    background: url(slider-arrow-blue.png) no-repeat scroll left center !important;
+}
+
+.donation-portlet a {
+    background: #0534B6 none;
+}
+
+th{
+    background-color: #0534B6;
+}
+
+body.subsite footer a:hover,
+footer a:hover {
+    color: #0534B6;
+}
+
+/*button*/
+button, .button, input[type="button"], input[type="reset"], input[type="submit"]{
+    background-color: #0534B6;
+    border-color: #05349A;
+}
+button:hover, .button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{
+    background-color: #05349A;
+}
+
+@media screen and (max-width: 640px) {
+    nav{background: none transparent;box-shadow: none;}
+}
+
+.tinynav, .tinynav:focus,.tinynav:hover{
+    background-color: #0534B6;
+}
+
+.bss-slides figcaption,
+#m-toggle-menu{
+    background: none #0534B6;
+}
+.bss-next, .bss-prev{
+    color: #0534B6;
+}
