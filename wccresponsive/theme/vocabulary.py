@@ -7,11 +7,11 @@ from z3c.formwidget.query.interfaces import IQuerySource
 
 
 SCHEMES_CSS={
-    'red': 'wcc-scheme-red.css',
-    'blue': 'wcc-scheme-blue.css',
-    'darkgreen': 'wcc-scheme-darkgreen.css',
-    'pantone377': 'wcc-scheme-pantone377.css',
-    'brown': 'wcc-scheme-brown.css'
+    'red': 'wccresponsive-scheme-red.css',
+    'blue': 'wccresponsive-scheme-blue.css',
+    'darkgreen': 'wccresponsive-scheme-darkgreen.css',
+    'pantone377': 'wccresponsive-scheme-pantone377.css',
+    'brown': 'wccresponsive-scheme-brown.css'
 }
 
 class ColorSchemes(object):
