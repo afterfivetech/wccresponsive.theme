@@ -22,6 +22,8 @@
     <replace css:theme="#logo" css:content="#portal-logo > a"/>
     <drop theme="//p[contains(@class, 'tagline')]" if-content="//a[contains(@title, 'Bossey')]" />
     <replace css:theme-children=".tagline" css:content-children="#portal-logo .logo-description"/>
+    <replace css:theme-children="#m-logo" css:content="#portal-logo > img"/>
+    
 
     <!-- search -->
     <replace css:theme-children=".top-right-container .search-container">
