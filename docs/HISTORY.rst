@@ -1,5 +1,10 @@
 Changelog
 =========
+
+1.2.8dev0 - (20 Oct 2015)
+_____________________
+- fixed js conflicts
+
 1.2.7 - (13 Oct 2015)
 _____________________
 - updated slider and mobile view
