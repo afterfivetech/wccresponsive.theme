@@ -17,6 +17,9 @@
     <merge theme="/html/body" css:content="meta[name='wcc.subsite']" attributes="class"/>
     <append css:theme="body" css:content="#plone-analytics"/>
     <prepend css:theme=".colorstrip-inner" css:content="#portal-personaltools"/>
+    
+    <!--drop jquery from wcc.homepage-->
+    <drop content="//script[contains(@src, '++resource++wcc.homepage/lofslidernews/js/jquery.js')]" />
 
     <!--logo-->
     <replace css:theme="#logo" css:content="#portal-logo > a"/>
