@@ -2,7 +2,6 @@
 <object name="portal_javascripts" meta_type="JavaScripts Registry">
 	
     <javascript id="++resource++plone.app.jquery.js" expression="not: request/HTTP_X_THEME_ENABLED | nothing" />
-    <javascript id="++resource++wcc.homepage/lofslidernews/js/jquery.js" expression="not: request/HTTP_X_THEME_ENABLED | nothing" />
     <javascript id="modernizr.js" expression="not: request/HTTP_X_THEME_ENABLED | nothing" />
 
     <!-- -*- extra stuff goes here -*- -->
