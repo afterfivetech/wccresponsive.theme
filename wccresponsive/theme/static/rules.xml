@@ -19,7 +19,7 @@
     <prepend css:theme=".colorstrip-inner" css:content="#portal-personaltools"/>
     
     <!--drop jquery from wcc.homepage-->
-    <drop content="//script[contains(@src, '++resource++wcc.homepage/lofslidernews/js/jquery.js')]" />
+    <!--<drop content="//script[contains(@src, '++resource++wcc.homepage/lofslidernews/js/jquery.js')]" />-->
 
     <!--logo-->
     <replace css:theme="#logo" css:content="#portal-logo > a"/>
@@ -211,11 +211,14 @@
     
     <drop theme="/html/body/script" />
     <after css:theme-children="body">
+        <xsl:if css:test=".homepage-view">
+            <script src="++theme++wccresponsive.theme/js/jquery-1.7.2.min.js"></script>
+        </xsl:if>
         <script src="++theme++wccresponsive.theme/js/foundation.min.js"></script>
         <script src="++theme++wccresponsive.theme/js/tinynav.min.js"></script>
         
         <xsl:if css:test=".homepage-view">
-            <script src="++theme++wccresponsive.theme/js/better-simple-slideshow.min.js"></script>            
+            <script src="++theme++wccresponsive.theme/js/better-simple-slideshow.min.js"></script>
             <script>
                 var opts = {
                     auto : false,
@@ -223,8 +226,7 @@
                     swipe : false
                 };
                 makeBSS('.num2', opts);
-            </script>
-            <script>
+                
                 var picNum = $('ul.sliders-wrap-inner li').length;
                 $('ul.sliders-wrap-inner li').each(function(key, value){
                     imgSrc = $('> a > img', this).attr('src');
