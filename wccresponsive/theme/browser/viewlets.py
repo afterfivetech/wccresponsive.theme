@@ -34,6 +34,29 @@ class LogoViewlet(BaseLogoViewlet):
         settings = getSettings()
         if settings.logo_url.strip():
             self.navigation_root_url = settings.logo_url
+            
+    def mobile_logo(self):
+        settings = getSettings()
+        lang = self.portal_state.language()
+        portal = self.portal_state.portal()
+        logoTitle = self.portal_state.portal_title()
+        logo_tag = self.logo_tag
+        navigation_root_description = ''
+        navigation_root_url = self.navigation_root_url
+        
+        logoName = 'logo-mobile-%s.png' % lang
+        if hasattr(portal, logoName):
+            logo_tag = portal.restrictedTraverse(logoName
+                    ).tag(title=logoTitle, alt=logoTitle)
+            
+            
+        #if settings.mobile_logo_url.strip():
+        #    navigation_root_url = settings.mobile_logo_url
+        
+        
+        #return dict(logo_tag=logo_tag, navigation_root_url=navigation_root_url)
+    
+        return logo_tag
 
 
 class SubsiteViewlet(ViewletBase):
