@@ -13866,6 +13866,13 @@ table tr th {
   #m-logo h1 {
     color: #222222; }
 
+.mobile-languageselector {
+  margin: 20px !important;
+  padding: 20px !important;
+  border: 1px solid #555555; }
+  .mobile-languageselector li:last-child a {
+    border-bottom: none; }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
