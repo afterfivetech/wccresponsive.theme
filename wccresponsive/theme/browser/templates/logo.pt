@@ -8,8 +8,12 @@
    i18n:domain="plone"
    i18n:attributes="title">
     <img src="logo.jpg" alt=""
-        tal:replace="structure view/logo_tag" />
+        tal:replace="structure view/logo_tag" id='desktop-logo'/>
+   <img src="logo.jpg" alt=""
+        tal:replace="structure view/mobile_logo" id='mobile-logo'/>
 </a>
+
+
 <div class="logo-description"
     style="font-size:12px;margin-top:10px;width:435px;" tal:content="view/navigation_root_description"></div>
 </div>
