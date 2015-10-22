@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev1 - (22 Oct 2015)
+_____________________
+- jsregistry adjustment and adjustment for homepage
+
 1.2.8dev0 - (20 Oct 2015)
 _____________________
 - fixed js conflicts
