@@ -13873,6 +13873,13 @@ table tr th {
   .mobile-languageselector li:last-child a {
     border-bottom: none; }
 
+/*login field*/
+@media screen and (max-width: 320px) {
+  #fieldset-openid-login input, #login-form input {
+    width: 100% !important; }
+  #fieldset-openid-login label, #login-form label {
+    width: auto !important; } }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
