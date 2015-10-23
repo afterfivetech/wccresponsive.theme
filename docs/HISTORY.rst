@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev2 - (23 Oct 2015)
+_____________________
+- rules adjustment for mobile logo, mobile language selector and english logo for mobile
+
 1.2.8dev1 - (22 Oct 2015)
 _____________________
 - jsregistry adjustment and adjustment for homepage
