@@ -21,8 +21,24 @@
     <!--drop jquery from wcc.homepage-->
     <!--<drop content="//script[contains(@src, '++resource++wcc.homepage/lofslidernews/js/jquery.js')]" />-->
 
-    <!--logo-->
-    <replace css:theme="#logo" css:content="#portal-logo > a"/>
+    <!--logo for large screen-->
+    <replace css:theme-children="h1.title">
+        <xsl:element name="a">
+            <xsl:attribute name="href">
+                <xsl:value-of select="//div[@id='portal-logo']/a/@href"/>
+            </xsl:attribute>
+            <xsl:copy-of select="//div[@id='portal-logo']/a/img[1]"/>
+        </xsl:element>
+    </replace>
+    <!--logo for large mobile-->
+    <replace css:theme-children="#m-logo">
+        <xsl:element name="a">
+            <xsl:attribute name="href">
+                <xsl:value-of select="//div[@id='portal-logo']/a/@href"/>
+            </xsl:attribute>
+            <xsl:copy-of select="//div[@id='portal-logo']/a/img[2]"/>
+        </xsl:element>
+    </replace>
     <drop theme="//p[contains(@class, 'tagline')]" if-content="//a[contains(@title, 'Bossey')]" />
     <replace css:theme-children=".tagline" css:content-children="#portal-logo .logo-description"/>
     <replace css:theme-children="#m-logo" css:content="#portal-logo > img"/>
