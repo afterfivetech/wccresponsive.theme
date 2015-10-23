@@ -40,9 +40,11 @@
     
     <!--navigation-->
     <replace css:theme-children='#portal-globalnav' css:content-children='#portal-globalnav' />
-    <replace css:theme-children='.off-canvas-list' css:content-children='#portal-globalnav' />
+    <replace css:theme-children='.mobile-menu.off-canvas-list' css:content-children='#portal-globalnav' />
     <!--language-->
     <replace css:theme-children='#portal-languageselector' css:content-children='#portal-languageselector'/>
+    <replace css:theme-children=".mobile-languageselector.off-canvas-list" css:content-children="#portal-languageselector" />
+    <drop css:theme=".mobile-languageselector" css:if-not-content="#portal-languageselector" />
     
     <!--portal-siteactions-->
     <replace css:theme-children=".footer-link">
