@@ -229,9 +229,9 @@
     
     <drop theme="/html/body/script" />
     <after css:theme-children="body">
-        <xsl:if css:test=".homepage-view">
+        <!--<xsl:if css:test=".homepage-view">
             <script src="++theme++wccresponsive.theme/js/jquery-1.7.2.min.js"></script>
-        </xsl:if>
+        </xsl:if>-->
         <script src="++theme++wccresponsive.theme/js/foundation.min.js"></script>
         <script src="++theme++wccresponsive.theme/js/tinynav.min.js"></script>
         
