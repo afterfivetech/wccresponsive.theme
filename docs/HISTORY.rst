@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev3 - (27 Oct 2015)
+_____________________
+- adjustment for jquery conflict in large screen slider and foundation. Also adjustment for login field in screen max width 320px
+
 1.2.8dev2 - (23 Oct 2015)
 _____________________
 - rules adjustment for mobile logo, mobile language selector and english logo for mobile
