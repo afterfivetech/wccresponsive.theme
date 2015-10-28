@@ -13713,9 +13713,15 @@ div.search-portlet {
 /*focus area*/
 .focus-container {
   background: none bottom #f2f2f2;
-  /*height: 350px;*/
   overflow: hidden;
   box-shadow: 0 5px 25px #555555; }
+  .focus-container .lof-slidecontent .main-slider-content {
+    width: 530px !important; }
+
+.focus-container.mini-page .lof-slidecontent {
+  width: 1063px !important; }
+  .focus-container.mini-page .lof-slidecontent .main-slider-content {
+    width: 800px !important; }
 
 /*footer*/
 footer {
