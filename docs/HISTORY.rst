@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev4 - (28 oct 2015)
+_____________________
+- adjustmetn for large screen slider and removed float image in small screens
+
 1.2.8dev3 - (27 Oct 2015)
 _____________________
 - adjustment for jquery conflict in large screen slider and foundation. Also adjustment for login field in screen max width 320px
