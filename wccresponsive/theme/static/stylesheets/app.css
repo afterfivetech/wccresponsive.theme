@@ -13781,6 +13781,7 @@ body.subsite {
   background-color: #205c90; }
 
 @media screen and (max-width: 640px) {
+  /*float none for small screens*/
   #main {
     margin-top: 20px; }
   nav {
@@ -13792,7 +13793,10 @@ body.subsite {
     display: block;
     margin: 0; }
   #portal-globalnav {
-    display: none; } }
+    display: none; }
+  .image-left, .image-left, #content img.tileImage, #content div.newsImageContainer {
+    float: none !important;
+    margin: 0 !important; } }
 
 @media screen and (min-width: 641px) {
   .tagline {
