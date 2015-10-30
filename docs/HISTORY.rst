@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev5 - (30 oct 2015)
+_____________________
+-rules xml adjustment for other homepage templates
+
 1.2.8dev4 - (28 oct 2015)
 _____________________
 - adjustmetn for large screen slider and removed float image in small screens
