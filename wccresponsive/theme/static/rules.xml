@@ -171,6 +171,36 @@
         </replace>
     </rules>
     
+    <rules css:if-content="#wcc-homepage-homepage2slider">
+        <theme href="index-subsite.html"/>
+        <replace css:theme-children=".main-page-content-container">
+            <div class="row">
+                <div class="large-12 column">
+                    <xsl:copy-of css:select="#homepage2-bodytext"/>
+                </div>
+            </div>
+        </replace>
+    </rules>
+    
+    <rules css:if-content="#homepage4-view">
+        <replace css:theme-children=".main-page-content-container">
+            <div class="row">
+                <xsl:for-each css:select="#homepage3-newsblock > div > div:nth-child(1) > div">
+                    <div class="large-4 columns">
+                        <div style="margin:10px">
+                            <xsl:copy-of css:select="div:nth-child(1) > img"/>
+                            <xsl:copy-of css:select="div:nth-child(2)"/>
+                        </div>
+                    </div>
+                </xsl:for-each>
+            </div>
+            <p class="text-right" style="margin:10px">
+                <xsl:copy-of css:select=".homepage3-morenews > a"/>
+            </p>
+        </replace>
+    </rules>
+    
+    
     <!--for all homepage-->
     <after css:theme=".subsite-news-container">
         <div class="clearfix news-list-morelink" style="text-align:right;margin-bottom:15px">
