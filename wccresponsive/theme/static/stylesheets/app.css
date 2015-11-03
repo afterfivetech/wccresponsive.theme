@@ -13723,6 +13723,12 @@ div.search-portlet {
   .focus-container.mini-page .lof-slidecontent .main-slider-content {
     width: 800px !important; }
 
+.lof-slidecontent ul.navigator-wrap-inner li h2 {
+  font-size: 1.7em !important; }
+
+.lof-slidecontent ul.navigator-wrap-inner li span {
+  font-size: 14px !important; }
+
 /*footer*/
 footer {
   font-size: 20px;
