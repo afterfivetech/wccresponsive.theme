@@ -182,6 +182,24 @@
         </replace>
     </rules>
     
+    <rules css:if-content="#homepage3-view">
+        <theme href="index-subsite.html"/>
+        <replace css:theme-children=".main-page-content-container">
+            <div class="row">
+                <xsl:for-each css:select="#homepage3-newsblock > div > div:nth-child(1) > div">
+                    <div class="large-4 columns">
+                        <div style="margin:10px">
+                            <xsl:copy-of css:select="div > div"/>
+                        </div>
+                    </div>
+                </xsl:for-each>
+            </div>
+        </replace>
+        <before css:theme-children="aside.sidebar-right">
+            <xsl:copy-of css:select=".homepage3-text > *"/>
+        </before>
+    </rules>
+    
     <rules css:if-content="#homepage4-view">
         <replace css:theme-children=".main-page-content-container">
             <div class="row">
