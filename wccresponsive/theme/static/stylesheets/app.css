@@ -13718,7 +13718,7 @@ div.search-portlet {
   .focus-container .lof-slidecontent .main-slider-content {
     width: 530px !important;
     height: 350px !important;
-    padding: 10px; }
+    padding: 10px !important; }
 
 .focus-container.mini-page .lof-slidecontent {
   width: 1063px !important; }
