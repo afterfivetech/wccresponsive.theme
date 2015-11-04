@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev7 (nov 4 2015
+_____________________
+adjustment for slider navigation
+
 1.2.8dev6 (nov 3 2015)
 _____________________
 rules adjustment for homepage3 template + css adjustment for large slider navigation
