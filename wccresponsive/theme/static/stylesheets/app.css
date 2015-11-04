@@ -13716,12 +13716,16 @@ div.search-portlet {
   overflow: hidden;
   box-shadow: 0 5px 25px #555555; }
   .focus-container .lof-slidecontent .main-slider-content {
-    width: 530px !important; }
+    width: 530px !important;
+    height: 350px !important;
+    padding: 10px !important; }
 
 .focus-container.mini-page .lof-slidecontent {
   width: 1063px !important; }
   .focus-container.mini-page .lof-slidecontent .main-slider-content {
-    width: 800px !important; }
+    width: 800px !important;
+    height: 350px !important;
+    padding: 10px !important; }
 
 .lof-slidecontent ul.navigator-wrap-inner li h2 {
   font-size: 1.7em !important; }
