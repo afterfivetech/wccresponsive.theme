@@ -189,7 +189,8 @@
                 <xsl:for-each css:select="#homepage3-newsblock > div > div:nth-child(1) > div">
                     <div class="large-4 columns">
                         <div style="margin:10px">
-                            <xsl:copy-of css:select="div > div"/>
+                            <xsl:copy-of css:select="div:nth-child(1) > img"/>
+                            <xsl:copy-of css:select="div:nth-child(2)"/>
                         </div>
                     </div>
                 </xsl:for-each>
