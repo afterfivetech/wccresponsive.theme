@@ -13804,7 +13804,7 @@ body.subsite {
     margin: 0; }
   #portal-globalnav {
     display: none; }
-  .image-left, .image-left, #content img.tileImage, #content div.newsImageContainer {
+  .image-left, .image-right, #content img.tileImage, #content div.newsImageContainer {
     float: none !important;
     margin: 0 !important; } }
 
