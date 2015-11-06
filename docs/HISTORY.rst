@@ -1,13 +1,17 @@
 Changelog
 =========
 
-1.2.8dev7 (nov 4 2015
+1.2.8dev8 (nov 6 2015)
 _____________________
-adjustment for slider navigation
+adjustment for homepage news item, remove float for class image-right if viewed at small screen device, rules adjustment for homepage3 template
+
+1.2.8dev7 (nov 4 2015)
+_____________________
+-adjustment for slider navigation
 
 1.2.8dev6 (nov 3 2015)
 _____________________
-rules adjustment for homepage3 template + css adjustment for large slider navigation
+-rules adjustment for homepage3 template + css adjustment for large slider navigation
 
 1.2.8dev5 - (30 oct 2015)
 _____________________
