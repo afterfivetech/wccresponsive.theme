@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.2.8dev8'
+version = '1.2.8dev9'
 
 setup(name='wccresponsive.theme',
       version=version,

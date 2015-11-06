@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev9 (nov 6 2015)
+_____________________
+-added link to other langauges and adjust classes hide-for-large(hide-for-large-up) and show-for-large(show-for-large-up)
+
 1.2.8dev8 (nov 6 2015)
 _____________________
 adjustment for homepage news item, remove float for class image-right if viewed at small screen device, rules adjustment for homepage3 template
