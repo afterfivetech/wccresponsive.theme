@@ -188,9 +188,16 @@
             <div class="row">
                 <xsl:for-each css:select="#homepage3-newsblock > div > div:nth-child(1) > div">
                     <div class="large-4 columns">
-                        <div style="margin:10px">
-                            <xsl:copy-of css:select="div:nth-child(1) > img"/>
-                            <xsl:copy-of css:select="div:nth-child(2)"/>
+                        <div style="margin:10px" class="news-item-wimg">
+                            <xsl:if test="div[1]/img">
+                                <xsl:copy-of select="div[2]/h3"/>
+                                <xsl:copy-of select="div[1]/img"/>
+                                <xsl:copy-of select="div[2]/p"/>
+                            </xsl:if>
+                            <xsl:if test="not(div[1]/img)">
+                                <xsl:copy-of select="div[2]/h3"/>
+                                <xsl:copy-of select="div[2]/p"/>
+                            </xsl:if>
                         </div>
                     </div>
                 </xsl:for-each>
@@ -206,9 +213,16 @@
             <div class="row">
                 <xsl:for-each css:select="#homepage3-newsblock > div > div:nth-child(1) > div">
                     <div class="large-4 columns">
-                        <div style="margin:10px">
-                            <xsl:copy-of css:select="div:nth-child(1) > img"/>
-                            <xsl:copy-of css:select="div:nth-child(2)"/>
+                        <div style="margin:10px" class="news-item-wimg">
+                            <xsl:if test="div[1]/img">
+                                <xsl:copy-of select="div[2]/h3"/>
+                                <xsl:copy-of select="div[1]/img"/>
+                                <xsl:copy-of select="div[2]/p"/>
+                            </xsl:if>
+                            <xsl:if test="not(div[1]/img)">
+                                <xsl:copy-of select="div[2]/h3"/>
+                                <xsl:copy-of select="div[2]/p"/>
+                            </xsl:if>
                         </div>
                     </div>
                 </xsl:for-each>

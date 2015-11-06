@@ -13792,6 +13792,7 @@ body.subsite {
 
 @media screen and (max-width: 640px) {
   /*float none for small screens*/
+  /*float for small screens*/
   #main {
     margin-top: 20px; }
   nav {
@@ -13806,7 +13807,10 @@ body.subsite {
     display: none; }
   .image-left, .image-right, #content img.tileImage, #content div.newsImageContainer {
     float: none !important;
-    margin: 0 !important; } }
+    margin: 0 !important; }
+  .news-item > img, .news-item-wimg > img {
+    float: left;
+    margin: 0 20px 10px 0; } }
 
 @media screen and (min-width: 641px) {
   .tagline {
