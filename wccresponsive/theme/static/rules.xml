@@ -60,11 +60,11 @@
     <!--language-->
     <replace css:theme-children="#portal-languageselector">
         <xsl:copy-of css:select="#portal-languageselector > li"/>
-        <li><a href="/en/press-centre/news-in-other-languages">Korean and Portuguese</a></li>
+        <li><a href="/en/press-centre/news-in-other-languages">...</a></li>
     </replace>
     <replace css:theme-children=".mobile-languageselector.off-canvas-list">
         <xsl:copy-of css:select="#portal-languageselector > li"/>
-        <li><a href="/en/press-centre/news-in-other-languages">Korean and Portuguese</a></li>
+        <li><a href="/en/press-centre/news-in-other-languages">...</a></li>
     </replace>
     <drop css:theme="#portal-languageselector" css:if-not-content="#portal-languageselector" />
     <drop css:theme=".mobile-languageselector" css:if-not-content="#portal-languageselector" />
