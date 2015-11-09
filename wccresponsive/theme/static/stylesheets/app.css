@@ -13807,7 +13807,8 @@ body.subsite {
     display: none; }
   .image-left, .image-right, #content img.tileImage, #content div.newsImageContainer {
     float: none !important;
-    margin: 0 !important; }
+    margin: 0 !important;
+    display: block; }
   .news-item > img, .news-item-wimg > img {
     float: left;
     margin: 0 20px 10px 0; } }
