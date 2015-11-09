@@ -13905,6 +13905,10 @@ table tr th {
   #fieldset-openid-login label, #login-form label {
     width: auto !important; } }
 
+/*hide other loaguages*/
+.mobile-languageselector li.language-pt, .mobile-languageselector li.language-ko, #portal-languageselector li.language-pt, #portal-languageselector li.language-ko {
+  display: none; }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
