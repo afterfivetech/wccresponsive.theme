@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev10 (nov 9 2015)
+_____________________
+-rules and css adjustment for link language Korean and Portuguese and adjustment for floated images view in small screen
+
 1.2.8dev9 (nov 6 2015)
 _____________________
 -added link to other langauges and adjust classes hide-for-large(hide-for-large-up) and show-for-large(show-for-large-up)
