@@ -163,7 +163,7 @@
 
         <replace css:theme-children=".events-list-container">
             <xsl:if test="//h2[@id='homepage-events-title']/text()">
-                <h2 class="portlet-header"><xsl:value-of select="//h2[@id='homepage-events-title']/text()"/></h2>
+                <h2 class="portlet-header"><xsl:copy-of select="//h2[@id='homepage-events-title']/a"/></h2>
             </xsl:if>
             <xsl:for-each css:select=".homepage-event">
                 <div class="clearfix events-list-item">
