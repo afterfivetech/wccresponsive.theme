@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev11 (nov 10 2015)
+_____________________
+-adjustment for homepage events
+
 1.2.8dev10 (nov 9 2015)
 _____________________
 -rules and css adjustment for link language Korean and Portuguese and adjustment for floated images view in small screen
