@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev12 (nov 11 2015)
+_____________________
+auto rotate mobile slider and adjust slider caption font and adjustment for search for mobile
+
 1.2.8dev11 (nov 10 2015)
 _____________________
 -adjustment for homepage events
