@@ -267,7 +267,7 @@
                             </xsl:element>
                         </xsl:element>
                         <figcaption>
-                            <xsl:value-of select="div/a/h2"/>
+                            <h4 style="color:#fff"><xsl:value-of select="div/a/h2"/></h4>
                         </figcaption>
                     </figure>
                 </xsl:for-each>
@@ -310,8 +310,10 @@
             <script src="++theme++wccresponsive.theme/js/better-simple-slideshow.min.js"></script>
             <script>
                 var opts = {
-                    auto : false,
-                    fullScreen : true,
+                    auto : {
+                        speed : 10000, 
+                    },
+                    fullScreen : false,
                     swipe : false
                 };
                 makeBSS('.num2', opts);
