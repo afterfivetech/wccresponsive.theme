@@ -1,5 +1,8 @@
 Changelog
 =========
+1.2.8dev13 (nov 12 2015)
+_____________________
+adjust large screen min-range and medium screen max-range
 
 1.2.8dev12 (nov 11 2015)
 _____________________
