@@ -162,8 +162,12 @@
         </replace>
 
         <replace css:theme-children=".events-list-container">
-            <xsl:if test="//h2[@id='homepage-events-title']/text()">
+            <xsl:if test="//h2[@id='homepage-events-title']/a">
                 <h2 class="portlet-header"><xsl:copy-of select="//h2[@id='homepage-events-title']/a"/></h2>
+            </xsl:if>
+            <!--<xsl:if test="not(div/div/img)">-->
+            <xsl:if test="not(//h2[@id='homepage-events-title']/a)">
+                <h2 class="portlet-header"><xsl:copy-of select="//h2[@id='homepage-events-title']/text()"/></h2>
             </xsl:if>
             <xsl:for-each css:select=".homepage-event">
                 <div class="clearfix events-list-item">
