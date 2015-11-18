@@ -1,5 +1,10 @@
 Changelog
 =========
+
+1.2.8dev14 (nov 18 2015)
+_____________________
+add link in mobile slider item caption and adjustment for homepage events title
+
 1.2.8dev13 (nov 12 2015)
 _____________________
 adjust large screen min-range and medium screen max-range
