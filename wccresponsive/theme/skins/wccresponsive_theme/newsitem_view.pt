@@ -21,14 +21,16 @@
              tal:condition="context/getImage|nothing">
             <a href="#"
                tal:define="here_url context/@@plone_context_state/object_url;"
-               tal:attributes="href string:$here_url/image/image_view_fullscreen"
-               id="parent-fieldname-image">
+               tal:attributes="href string:$here_url/image/image_view_fullscreen"> <!-- removed id='parent-fieldname-image' -->
                <img tal:replace="structure python: context.tag(scale='preview', css_class='newsImage')" src="" alt="" />
             </a>
-            <p class="discreet" tal:condition="context/imageCaption|nothing">
-              <metal:field use-macro="python:context.widget('imageCaption', mode='view')">
+            <p tal:define="scales context/@@images; thumb python: scales.scale('image', scale='preview')" tal:condition="context/imageCaption|nothing"
+               tal:attributes="style string:width:${thumb/width}px"
+               class="discreet"
+               tal:content="structure context/imageCaption|nothing">
+              <!--<metal:field use-macro="python:context.widget('imageCaption', mode='view')">
               Image Caption
-              </metal:field>
+              </metal:field>-->
             </p>
         </div>
 
