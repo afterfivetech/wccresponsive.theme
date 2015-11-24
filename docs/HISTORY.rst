@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.2.8dev14 (nov 18 2015)
+_____________________
+add link in mobile slider item caption and adjustment for homepage events title
+
+1.2.8dev13 (nov 12 2015)
+_____________________
+adjust large screen min-range and medium screen max-range
+
 1.2.8dev12 (nov 11 2015)
 _____________________
 auto rotate mobile slider and adjust slider caption font and adjustment for search for mobile
