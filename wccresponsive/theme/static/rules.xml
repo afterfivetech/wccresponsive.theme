@@ -39,6 +39,9 @@
             <xsl:copy-of select="//div[@id='portal-logo']/a/img[2]"/>
         </xsl:element>
     </replace>
+    <replace css:theme-children=".tagline" css:if-content=".site-iacfaith">
+        Providing space for networking, learning and advocacy among people of faith responding to HIV and AIDS
+    </replace>
     <drop theme="//p[contains(@class, 'tagline')]" if-content="//a[contains(@title, 'Bossey')]" />
     <replace css:theme-children=".tagline" css:content-children="#portal-logo .logo-description"/>
     <replace css:theme-children="#m-logo" css:content="#portal-logo > img"/>
@@ -277,7 +280,6 @@
                                     </xsl:attribute>
                                     <xsl:value-of select="div/a/h2"/>
                                 </xsl:element>
-                                
                             </h4>
                         </figcaption>
                     </figure>
