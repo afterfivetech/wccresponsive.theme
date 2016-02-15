@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev16 (feb 15)
+_____________________
+-adjustment for tagline in iacfaith site and rules adjustment for iactaith tagline
+
 1.2.8dev15 (nov 24 2015)
 _____________________
 -adjust width of image caption
