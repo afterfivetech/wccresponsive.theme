@@ -11,6 +11,7 @@ SCHEMES_CSS={
     'blue': 'wccresponsive-scheme-blue.css',
     'darkgreen': 'wccresponsive-scheme-darkgreen.css',
     'pantone377': 'wccresponsive-scheme-pantone377.css',
+    'pantone376': 'wccresponsive-scheme-pantone376.css',
     'brown': 'wccresponsive-scheme-brown.css'
 }
 
