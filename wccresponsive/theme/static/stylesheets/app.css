@@ -13967,6 +13967,8 @@ table tr th {
     color: #cccccc;
     margin: 1em 0;
     font-size: 75%; }
+  .post-article .post_rmore {
+    margin-top: 1.33333rem; }
 
 /* @group Content Area */
 /* Editor styles */
