@@ -241,9 +241,23 @@
                     </div>
                 </xsl:for-each>
             </div>
-            <p class="text-right" style="margin:10px">
-                <xsl:copy-of css:select=".homepage3-morenews > a"/>
-            </p>
+            
+            <xsl:if test="//body[contains(@class, 'site-iacfaith')]">
+                <p class="text-right" style="margin:10px">
+                    <xsl:element name="a">
+                        <xsl:attribute name="href">
+                            <xsl:value-of select="//div[contains(@class, 'homepage3-morenews')]/a/@href" />
+                        </xsl:attribute>
+                        <span>More</span>  » 
+                    </xsl:element>
+                </p>
+            </xsl:if>
+            <xsl:if test="//body[not(contains(@class, 'site-iacfaith'))]">
+                <p class="text-right" style="margin:10px">
+                    <xsl:copy-of css:select=".homepage3-morenews > a"/>
+                </p>
+            </xsl:if>
+            
         </replace>
     </rules>
     
