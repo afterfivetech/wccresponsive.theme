@@ -106,7 +106,7 @@
 }
 
 
-@media screen and (max-width: 640px){
+@media screen and (max-width: 1024px){
   .bss-slides figcaption{
     width: 75%;
     padding: .75em .25em;
