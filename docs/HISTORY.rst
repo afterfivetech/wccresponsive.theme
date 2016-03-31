@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev19 (mar 31)
+_____________________
+-adjust min width of a large screen
+
 1.2.8dev18 (mar 3)
 _____________________
 -adjustment for tagline in iacfaith site and rules adjustment for iactaith tagline
