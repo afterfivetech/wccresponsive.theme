@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.8dev20 (april 3)
+_____________________
+- adjustment for slider
+
 1.2.8dev19 (mar 31)
 _____________________
 -adjust min width of a large screen
