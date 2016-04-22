@@ -3289,7 +3289,7 @@ var $JssorBulletNavigator$ = window.$JssorBulletNavigator$ = function (elmt, opt
                 _ButtonElements[buttonIndex] = div;
 
                 if (_Options.$ActionMode & 1)
-                    $Jssor$.$AddEvent(div, "click", $Jssor$.$CreateCallback(null, OnNavigationRequest, buttonIndex));
+                    $Jssor$.$AddEvent(div, "mouseover", $Jssor$.$CreateCallback(null, OnNavigationRequest, buttonIndex));
 
                 if (_Options.$ActionMode & 2)
                     $Jssor$.$AddEvent(div, "mouseover", $Jssor$.$MouseOverOutFilter($Jssor$.$CreateCallback(null, OnNavigationRequest, buttonIndex), div));
@@ -3431,8 +3431,8 @@ var $JssorArrowNavigator$ = window.$JssorArrowNavigator$ = function (arrowLeft, 
 
         if (!_Initialized) {
 
-            $Jssor$.$AddEvent(arrowLeft, "click", $Jssor$.$CreateCallback(null, OnNavigationRequest, -_Steps));
-            $Jssor$.$AddEvent(arrowRight, "click", $Jssor$.$CreateCallback(null, OnNavigationRequest, _Steps));
+            $Jssor$.$AddEvent(arrowLeft, "mouseover", $Jssor$.$CreateCallback(null, OnNavigationRequest, -_Steps));
+            $Jssor$.$AddEvent(arrowRight, "mouseover", $Jssor$.$CreateCallback(null, OnNavigationRequest, _Steps));
 
             $Jssor$.$Buttonize(arrowLeft);
             $Jssor$.$Buttonize(arrowRight);
@@ -3516,7 +3516,7 @@ var $JssorThumbnailNavigator$ = window.$JssorThumbnailNavigator$ = function (elm
 
             _Button = $Jssor$.$Buttonize(_Wrapper);
             if (_Options.$ActionMode & 1)
-                $Jssor$.$AddEvent(_Wrapper, "click", OnNavigationRequest);
+                $Jssor$.$AddEvent(_Wrapper, "mouseover", OnNavigationRequest);
             if (_Options.$ActionMode & 2)
                 $Jssor$.$AddEvent(_Wrapper, "mouseover", $Jssor$.$MouseOverOutFilter(OnNavigationRequest, _Wrapper));
         }
