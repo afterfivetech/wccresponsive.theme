@@ -13910,11 +13910,30 @@ table tr th {
   display: none; }
 
 /*profile page*/
+#author-prof-container {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+  -moz-box-shadow: #999999 2px 2px 10px;
+  -webkit-box-shadow: #999999 2px 2px 10px;
+  box-shadow: #999999 2px 2px 10px;
+  word-wrap: break-word; }
+  #author-prof-container #prof-img {
+    text-align: center;
+    margin-bottom: 20px; }
+    #author-prof-container #prof-img img {
+      width: 100%; }
+  #author-prof-container #prof-info {
+    list-style: none;
+    padding-left: 0;
+    font-size: 12px;
+    margin-left: 0; }
+
 .author-prof-wrapper .author-prof {
   width: 200px;
   min-height: 100px;
   float: right;
-  margin: 0 0 20px 20px;
+  margin: 0 0 20px;
   background-color: #fafafa;
   -moz-box-shadow: #999999 2px 2px 10px;
   -webkit-box-shadow: #999999 2px 2px 10px;
