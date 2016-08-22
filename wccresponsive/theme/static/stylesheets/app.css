@@ -13928,6 +13928,10 @@ table tr th {
     padding-left: 0;
     font-size: 12px;
     margin-left: 0; }
+  #author-prof-container #author-twitter-feed {
+    background-color: white;
+    margin: 0 -15px -15px;
+    padding: 15px 15px 25px; }
 
 .author-prof-wrapper .author-prof {
   width: 200px;
