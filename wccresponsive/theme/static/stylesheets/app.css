@@ -14037,6 +14037,9 @@ table tr th {
   .lof-slidecontent .navigator-wrap-inner li {
     width: 250px !important; } }
 
+div > div.label {
+  background: none transparent; }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
