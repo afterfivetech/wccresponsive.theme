@@ -426,6 +426,7 @@
                     }
                     .jssort11 .pav h4,
                     .jssort11 .pav span,
+                    .jssort11 .pav p,
                     .jssort11 .pdn h4,
                     .jssort11 .pdn p,
                     .jssort11 .pdn a{
