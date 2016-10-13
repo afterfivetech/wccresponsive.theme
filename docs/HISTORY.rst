@@ -1,5 +1,8 @@
 Changelog
 =========
+1.2.8dev21 (oct 13)
+--------------------
+-adjust responsive slider description font color
 
 1.2.8dev20 (april 3)
 _____________________
