@@ -13444,7 +13444,8 @@ th.hide-for-touch {
 h1, h2, h3, h4, h5, h6 {
   font-family: Frutiger, Candara, Arial, Helvetica, sans-serif;
   color: #205c90;
-  font-weight: normal; }
+  font-weight: normal;
+  text-shadow: 0 1px 3px #cccccc; }
 
 h2 {
   font-size: 1.9em; }
@@ -13541,8 +13542,9 @@ body {
       position: relative;
       /*margin-top: 75px;*/ }
       .main-header .top-right-container .search-container form.search-portlet input[type="text"] {
-        border: 1px solid black;
-        padding: 10px 5%; }
+        border: 1px solid #dddddd;
+        padding: 10px 5%;
+        box-shadow: 0 1px 5px #cccccc; }
       .main-header .top-right-container .search-container form.search-portlet input[type="submit"] {
         height: 40px;
         width: 40px;
@@ -13693,8 +13695,9 @@ div.search-portlet {
   position: relative;
   z-index: 100; }
   div.search-portlet input[type="text"] {
-    border: 1px solid black;
-    padding: 10px 5%; }
+    border: 1px solid #dddddd;
+    padding: 10px 5%;
+    box-shadow: 0 1px 5px #cccccc; }
   div.search-portlet input[type="submit"] {
     height: 40px;
     width: 40px;
@@ -15698,7 +15701,8 @@ input[type="button"], input[type="reset"], input[type="submit"] {
   background-color: #205c90;
   border-color: #1a4b73;
   color: white;
-  transition: background-color 300ms ease-out; }
+  transition: background-color 300ms ease-out;
+  box-shadow: 0 1px 5px #cccccc; }
   input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
     background-color: #1a4b73; }
   input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus {
