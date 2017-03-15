@@ -1,5 +1,9 @@
 Changelog
 =========
+1.2.8dev22 (march 15)
+--------------------
+-fixed datagrid in churches
+
 1.2.8dev21 (oct 13)
 --------------------
 -adjust responsive slider description font color
