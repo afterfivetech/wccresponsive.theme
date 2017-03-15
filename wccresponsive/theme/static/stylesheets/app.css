@@ -14043,6 +14043,12 @@ table tr th {
 div > div.label {
   background: none transparent; }
 
+tbody[data-id_prefix="form-widgets-church_member"] .datagridwidget-manipulator {
+  vertical-align: middle;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0; }
+
 /* @group Content Area */
 /* Editor styles */
 #content .discreet, #sidebar .discreet {
