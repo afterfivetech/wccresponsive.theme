@@ -14164,7 +14164,9 @@ table.listing tbody tr.odd {
   background: #eeeeee; }
 
 table.listing tbody tr td {
-  background: transparent; }
+  background: transparent;
+  word-break: break-word;
+  word-wrap: break-word;}
   
 table.listing tbody tr td a { 
   word-break: break-word;
