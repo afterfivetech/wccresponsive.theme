@@ -1,5 +1,10 @@
 Changelog
 =========
+
+1.2.9 (20 Oct 2017)
+-------------------
+- break long sentences by word in table view
+
 1.2.8dev22 (march 15)
 --------------------
 -fixed datagrid in churches
