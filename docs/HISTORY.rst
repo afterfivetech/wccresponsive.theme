@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.3.0dev0 (unreleased)
-----------------------
+1.3.0 (2017-10-26)
+------------------
 - update break by work css to include Firefox directives
 
 1.2.9 (20 Oct 2017)
