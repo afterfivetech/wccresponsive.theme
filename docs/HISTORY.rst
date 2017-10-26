@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.3.0dev0 (unreleased)
+----------------------
+- update break by work css to include Firefox directives
+
 1.2.9 (20 Oct 2017)
 -------------------
 - break long sentences by word in table view
