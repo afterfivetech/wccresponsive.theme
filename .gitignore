@@ -13,4 +13,3 @@ dev/
 .DS_Store
 *~
 *.egg
-*.egg-info
