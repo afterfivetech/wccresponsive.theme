@@ -14165,11 +14165,7 @@ table.listing tbody tr.odd {
 
 table.listing tbody tr td {
   background: transparent;
-  word-break: break-word;
-  word-wrap: break-word;}
-  
-table.listing tbody tr td a { 
-  word-break: break-word;
+  word-break: keep-all;
   word-wrap: break-word;}
 
 table.listing tbody tr.odd td {
