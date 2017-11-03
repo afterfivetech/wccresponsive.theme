@@ -575,6 +575,9 @@
                     $('img.nav-slider-img:eq('+(picNum+key)+')').attr('src', imgSrc);
                 });
             </script>
+            <script>
+                jssor_slider1_starter('slider1_container');
+            </script>
         </xsl:if>
         <script src="++theme++wccresponsive.theme/js/app.js"></script>
     </after>
