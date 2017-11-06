@@ -16011,3 +16011,8 @@ form[action="enl_subscribers_view"] input[type="submit"] {
 
 #details-fields.widget.radioscrolllist .field .widget select, #details-fields.widget.radioscrolllist .field .widget input {
   margin-bottom: 0 !important; }
+
+/*Faceted widget*/
+.widget-fieldset ul li input {
+  margin-bottom: 0 !important;
+}
