@@ -22,6 +22,9 @@
     <drop content="/html/head/script[contains(@src, '++resource++wcc.homepage/')]" if-content="//div[@id='homepage-view'][@class='homepage-normal-width homepage-view']" />
     <drop content="/html/head/script[contains(@src, 'homepage.js')]" if-content="//div[@id='homepage-view'][@class='homepage-normal-width homepage-view']" />
 
+    <!-- drop publication date, time, history on pages -->
+    <!-- <drop css:content="#plone-document-byline" css:if-content="body.template-document_view" /> -->
+
     <!--logo for large screen-->
     <replace css:theme-children="h1.title">
         <xsl:element name="a">
