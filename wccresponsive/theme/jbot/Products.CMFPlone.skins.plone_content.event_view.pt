@@ -18,9 +18,79 @@
             <h2 i18n:translate="summary_event_details">Event details</h2> 
                         <div class="eventDetail">
                         <h3 i18n:translate="event_when">When</h3>
-                        <div>
-                            <tal:differentday tal:condition="python:not context.start().Date() == context.end().Date()"
-                                              i18n:translate="event_when_differentday">
+                        <div tal:define="item_start context/start|nothing;
+                                         item_end context/end|nothing;
+                                         start_month item_start/month;
+                                         end_month item_end/month;
+                                         start_year item_start/year;
+                                         end_year item_end/year;
+                                         item_samedate python: True if item_start == item_end else False;
+                                         item_samemonth python: start_month == end_month;
+                                         item_sameyear python: start_year == end_year;
+                                         item_lang context/@@plone_portal_state/language;">
+                            <tal:if tal:condition="python: item_samemonth and not item_samedate and item_sameyear"
+                                    i18n:translate="event_when_differentday1">
+                                <abbr i18n:name="startdate"
+                                      tal:define="kss_class python:getKssClasses('startDate',
+                                                  templateId=templateId, macro='startdate-field-view');"
+                                      id="parent-fieldname-startDate"
+                                      tal:attributes="class string:$kss_class dtstart;
+                                                      title python:context.start().ISO8601()">
+                                    <span metal:define-slot="inside" class="explain">
+                                        <span tal:content="python: toLocalizedTime(item_start).split()[0]">date</span>
+                                    </span>
+                                </abbr>
+                                -
+                                <abbr i18n:name="enddate"
+                                      tal:define="kss_class python:getKssClasses('endDate',
+                                                  templateId=templateId, macro='enddate-field-view');"
+                                      id="parent-fieldname-endDate"
+                                      tal:attributes="class string:$kss_class dtend;
+                                                      title python:context.end().ISO8601()">
+                                   <span metal:define-slot="inside" class="explain">
+                                     <span tal:content="python: toLocalizedTime(item_end)">date</span>
+                                     <!--<tal:word i18n:translate="event_when_differentday_optional_word_between_date_and_time" />-->
+                                  </span>
+                                </abbr>
+                            </tal:if>
+                            
+                            <tal:if tal:condition="python: not item_samemonth and not item_samedate and item_sameyear"
+                                    i18n:translate="event_when_differentday2">
+                                
+                                <abbr i18n:name="startdate"
+                                      tal:define="kss_class python:getKssClasses('startDate',
+                                                  templateId=templateId, macro='startdate-field-view');"
+                                      id="parent-fieldname-startDate"
+                                      tal:attributes="class string:$kss_class dtstart;
+                                                      title python:context.start().ISO8601()">
+                                    <span metal:define-slot="inside" class="explain">
+                                        <span tal:condition="python: item_lang != 'es'"
+                                                tal:content="python: ' '.join(toLocalizedTime(item_start).split()[0:-1])">
+                                            date
+                                          </span>
+                                          <span tal:condition="python: item_lang == 'es'"
+                                                tal:content="python: ' '.join(toLocalizedTime(item_start).split()[0:-2])">
+                                            date
+                                          </span>
+                                    </span>
+                                </abbr>
+                                -
+                                <abbr i18n:name="enddate"
+                                      tal:define="kss_class python:getKssClasses('endDate',
+                                                  templateId=templateId, macro='enddate-field-view');"
+                                      id="parent-fieldname-endDate"
+                                      tal:attributes="class string:$kss_class dtend;
+                                                      title python:context.end().ISO8601()">
+                                   <span metal:define-slot="inside" class="explain">
+                                     <span tal:content="python: toLocalizedTime(item_end)">date</span>
+                                     <!--<tal:word i18n:translate="event_when_differentday_optional_word_between_date_and_time" />-->
+                                  </span>
+                                </abbr>
+                                
+                            </tal:if>
+                            
+                            
+                            <tal:differentday tal:condition="python: not item_sameyear" i18n:translate="event_when_differentday1">
                                 <abbr i18n:name="startdate"
                                       metal:define-macro="startdate-field-view"
                                       tal:define="kss_class python:getKssClasses('startDate',
@@ -30,11 +100,11 @@
                                                       title python:context.start().ISO8601()">
                                   <span metal:define-slot="inside" class="explain">
                                     <span tal:replace="python:toLocalizedTime(context.start())">Start Date</span>
-                                    <tal:word i18n:translate="event_when_differentday_optional_word_between_date_and_time" />
+                                    <!--<tal:word i18n:translate="event_when_differentday_optional_word_between_date_and_time" />-->
                                   </span>
                                 </abbr>
-                                to
-                                <br i18n:name="linebreak" />
+                                -
+                                <!--<br i18n:name="linebreak" />-->
                                 <abbr i18n:name="enddate"
                                       metal:define-macro="enddate-field-view"
                                       tal:define="kss_class python:getKssClasses('endDate',
@@ -44,11 +114,11 @@
                                                       title python:context.end().ISO8601()">
                                    <span metal:define-slot="inside" class="explain">
                                      <span tal:replace="python:toLocalizedTime(context.end())">End Date</span>
-                                     <tal:word i18n:translate="event_when_differentday_optional_word_between_date_and_time" />
+                                     <!--<tal:word i18n:translate="event_when_differentday_optional_word_between_date_and_time" />-->
                                   </span>
                                 </abbr>
                             </tal:differentday>
-
+                            
                             <tal:sameday tal:condition="python:context.start().Date() == context.end().Date()"
                                          tal:define="ampm
                                          python:site_properties.getProperty('localLongTimeFormat').find('%p') >= 0"
