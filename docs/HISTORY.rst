@@ -4,8 +4,11 @@ Changelog
 1.3.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
-
+- apply preferred date formats for event view
+- fix js slider error
+- fix faceted item
+- remove pyc from version control
+- remove paster requirements
 
 1.3.0 (2017-10-26)
 ------------------
